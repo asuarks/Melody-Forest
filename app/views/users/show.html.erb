@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="container">
+    <%= @name %>さんの投稿一覧</p>
+
+    <% @posts.each do |post| %>
+      <%= simple_format(post.title) %>
+        <%= post.file %>
+        <%= simple_format(post.detail) %>
+    <% end %>
+  </div>
+</div>
