@@ -14,3 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// Bootstrap
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
+//参考 https://qiita.com/NaokiIshimura/items/c8db09daefff5c11dadf

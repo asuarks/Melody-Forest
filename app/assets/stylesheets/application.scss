@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+// Bootstrap
+// @import "bootstrap-sprockets";
+@import "bootstrap";
+
+//参考 https://qiita.com/NaokiIshimura/items/c8db09daefff5c11dadf
