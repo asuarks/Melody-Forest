@@ -6,6 +6,8 @@
       <%= simple_format(post.title) %>
       <%= post.file %>
       <%= simple_format(post.detail) %>
+      <hr>
     <% end %>
+    <%= paginate(@posts) %>
   </div>
 </div>
