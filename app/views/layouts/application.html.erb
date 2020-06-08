@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MelodyForestPrototype</title>
+    <title>MelodyForest</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,7 @@
   </head>
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Melody Forest</a>
+  <a class="navbar-brand" href="/">Melody Forest</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -18,7 +18,7 @@
   <div class="collapse navbar-collapse" id="navbarsExample03">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -41,6 +41,20 @@
     </form>
   </div>
 </nav>
+
+
+<%# pictweet参考 https://master.tech-camp.in/curriculums/3630%>
+
+  <%# <body>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">PicTweet</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/tweets/new">投稿する</a>
+        </div>
+      </div> %>
+
+<%# pictweet参考 https://master.tech-camp.in/curriculums/3630%>
 
   <body>
     <%= yield %>
