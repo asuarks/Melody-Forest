@@ -1,0 +1,16 @@
+<div class="contents row">
+  <div class="container">
+    <h3>
+      投稿する
+    </h3>
+    <%= form_with(model: @post, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "name" %>
+      <%= form.text_field :title, placeholder: "title" %>
+      <%= form.text_field :file, placeholder: "File Url" %>
+      <%= form.text_area :detail, placeholder: "detail" , rows: "10" %>
+      <%= form.submit "送信" %>
+    <% end %>
+  </div>
+</div>
+
+<%#参考 https://master.tech-camp.in/curriculums/3631#6 %>
