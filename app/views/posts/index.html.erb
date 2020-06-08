@@ -40,7 +40,7 @@
               <%= simple_format(post.title) %>
 
                 <%= post.file %>
-    <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
+                <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
               <p>
               <div class="more">
 
@@ -56,10 +56,17 @@
                   </li>
                 </ul>
               </div>
+
+                    <span>投稿者</span>
+                    <a href="/users/<%= post.user.id %>">
+                      <%= post.user.name %>
+                    </a>
+
+                <hr>
           <% end %>
         </div>
-    <%#参考 https://master.tech-camp.in/curriculums/3632#5 %>
-    <hr>
+                <%#参考 https://master.tech-camp.in/curriculums/3632#5 %>
+
   </div> <!-- /container -->
 
 </main>
