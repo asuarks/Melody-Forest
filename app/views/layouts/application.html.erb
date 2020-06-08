@@ -33,10 +33,10 @@
 
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <%= link_to "ログアウト", destroy_user_session_path, class: 'nav-link', method: :delete %>
         </li>
         <li class="nav-item">
-          <%= link_to  "投稿する", "/posts/new", class: "post" %>
+          <%= link_to  "投稿", "/posts/new", class: "nav-link" %>
         </li>
 
         <% else %>
