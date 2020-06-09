@@ -1,5 +1,5 @@
 <div class ="contents row">
-
+  <div class="container">
     <div class="more">
 
       <div class="container">
@@ -7,7 +7,6 @@
         <%= @post.file %>
         <%= @post.detail %>
       </div>
-
 
       <ul class="more_list">
       <% if user_signed_in? && current_user.id == @post.user_id %>
@@ -21,16 +20,31 @@
       </ul>
 
       <div class="container">
-
-        <%= form_with(model: [@post, @comment], local: true) do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-          <%= form.submit "SEND" %>
+        <% if current_user %>
+          <%= form_with(model: [@post, @comment], local: true) do |form| %>
+            <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+            <%= form.submit "SEND" %>
+          <% end %>
+        <% else %>
+          <strong><p>※コメントの投稿には新規登録/ログインが必要です</p></strong>
         <% end %>
+        <p></p>
+      </div>
+
+      <div class="comments">
+        <h4>コメント一覧</h4>
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <p>
+              <%= link_to comment.user.name, "/users/#{comment.user_id}" %>：
+              <%= comment.text %>
+            </p>
+          <% end %>
+        <% end %>
+      </div>
 
     </div>
-
-    </div>
-
+  </div>
 </div>
 
 <%#参考 https://master.tech-camp.in/curriculums/3633#3 %>
