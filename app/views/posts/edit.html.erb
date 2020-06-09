@@ -4,10 +4,10 @@
         編集する
     </h3>
     <%= form_with(model: @post, local: true) do |form| %>
-      <%= form.text_field :title, placeholder: "title" %>
-      <%= form.text_field :file, placeholder: "File Url" %>
-      <%= form.text_area :detail, placeholder: "detail" , rows: "10" %>
-      <%= form.submit "送信" %>
+      <%= form.text_field :title, placeholder: "title" , :class=>"form-control"%><p></p>
+      <%= form.text_field :file, placeholder: "File Url" , :class=>"form-control"%><p></p>
+      <%= form.text_area :detail, placeholder: "detail" , rows: "3", :class=>"form-control" %><p></p>
+      <%= form.submit "更新", :class=>"btn btn-primary" %>
     <% end %>
   </div>
 </div>
