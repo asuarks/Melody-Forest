@@ -5,6 +5,7 @@
     <div class="container">
       <h1 class="display-4">ようこそ Melody Forest へ!</h1>
       <p>このサイトはオリジナルのBGMを自由に投稿できるサービスです。</p>
+      <p>ログインすると投稿できるようになります。</p>
       <p><a class="btn btn-primary btn-lg" href="/posts/new" role="button">投稿する</a></p>
       <%# <p>投稿データ一覧を閲覧したい方はこちらへ!</p>
       <p><a class="btn btn-primary btn-lg" href="#" role="button">閲覧する</a></p> %>
@@ -40,7 +41,7 @@
             <%= simple_format(post.title) %>
               <%= post.file %>                  <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
             <div class="more">
-                <%= link_to '詳細', "/posts/#{post.id}", method: :get, class: 'btn btn-secondary'%>
+                <%= link_to '詳細', "/posts/#{post.id}", method: :get, class: 'btn btn-primary'%>
               <% if user_signed_in? && current_user.id == post.user_id %>
                 <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: 'btn btn-outline-secondary' %>
                 <%= link_to '削除', "/posts/#{post.id}", method: :delete, class: 'btn btn-outline-secondary' %>
