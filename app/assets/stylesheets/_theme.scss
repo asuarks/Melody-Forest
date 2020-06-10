@@ -1,24 +1,44 @@
 /* 変数の内容を変更 */
 /* テーマカラーを変更する */
+// 参考 https://www.schemecolor.com/conditions-of-rest.php
 $theme-colors: (
   headder:#11551B, /* デフォルトにないカラーの追加 */
   headder2: #3E8938,
   primary: #64AA36,
-  primary2:#B8DD5A,
+  primary2:#F3FF83,
   primary3:#2B7B76,
   primary4:#134668
 );
-// 参考 https://www.schemecolor.com/conditions-of-rest.php
-
-// /* ブレークポイントを変更する */
-// $grid-breakpoints: (
-//   lg: 1024px,
-//   xl: 1366px
-// );
 
 /* font-familyを上書き */
 $font-family-sans-serif:  Hiragino Kaku Gothic ProN,Meiryo,メイリオ, Arial, sans-serif;
 //参考 https://homupedia.com/bootstrap4-how-to-customize-theme.html
+
+// ヘッダー固定用
+.headder-padding {
+  padding-top: 3.5rem;
+}
+// .starter-template {
+//   padding: 3rem 1.5rem;
+// }
+
+// 背景を設定
+.jumbotron {
+  background-image: url("wood-1350175_1280.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.text-shadow {
+  // text-shadow:7px 7px 3px #11551B;  //影
+  text-shadow:0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B,0 0 3px #11551B;  //太枠
+}
+
+.text-shadow2 {
+  // text-shadow:7px 7px 3px #11551B;  //影
+  text-shadow:0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A;  //太枠
+}
 
 // /*ページネーション自体のデザイン*/
 // .pagination>li>a {          
