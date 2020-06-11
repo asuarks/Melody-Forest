@@ -30,4 +30,5 @@ public/uploads/*
 .DS_Store
 app/.DS_Store
 app/views/.DS_Store
+app/assets/stylesheets/.DS_Store
 app/assets/stylesheets/img/.DS_Store

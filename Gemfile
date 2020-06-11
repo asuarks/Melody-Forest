@@ -65,3 +65,5 @@ gem 'devise'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'kaminari' #ページネーション
+gem 'carrierwave' #https://qiita.com/tanakaworld/items/fbcd08eeccf826332f89
+gem 'carrierwave-audio'
