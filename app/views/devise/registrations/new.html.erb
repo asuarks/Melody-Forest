@@ -3,14 +3,19 @@
     <h3 class="mt-1 mb-3">アカウントを作成</h3>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
- 
+
+    <div class="form-group">
+      <%= f.label :name, "ニックネーム" %> <span class="small">(最大<%= 20 %>字まで)</span>
+      <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control" %>
+    </div>
+
     <div class="form-group">
       <%= f.label :email, "メールアドレス", :class => "form-label" %>
       <%= f.email_field :email, autocomplete: "email", :class => "form-control" %>
     </div>
  
     <div class="form-group">
-      <%= f.label :password, "パスワード (%s文字以上)"%@minimum_password_length, :class => "form-label" %>
+      <%= f.label :password, "パスワード" %@minimum_password_length, :class => "form-label" %> <span class="small">(最低<%= @minimum_password_length %>文字以上)</span>
       <%= f.password_field :password, :class => "form-control" %>
     </div>
  
@@ -24,7 +29,7 @@
     </div>
     <% end %>
     <div class="mt-2">
-      すでにアカウントをお持ちですか？<%= link_to "ログイン", new_user_session_path %>
+      すでにアカウントをお持ちですか？ <%= link_to "ログイン", new_user_session_path %>
     </div>
   </div>
 </div>
