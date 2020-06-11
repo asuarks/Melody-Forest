@@ -7,6 +7,7 @@
     <%= form_with(model: @post, local: true) do |form| %>
       タイトル
       <%= form.text_field :title, placeholder: "title" , :class=>"form-control"%><p></p>
+      <%= audio_tag @post.file, controls: true %><p>
       詳細
       <%= form.text_area :detail, placeholder: "detail" , rows: "3", :class=>"form-control" %><p></p>
       <%= form.submit "更新", :class=>"btn btn-primary" %>

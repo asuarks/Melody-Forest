@@ -38,6 +38,7 @@
     <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
       <h4>投稿データ一覧</h4>
         <div>
+        
           <% @posts.each do |post| %>
 
             タイトル：<%= post.title %>
@@ -51,14 +52,13 @@
 
               <% if user_signed_in? && current_user.id == post.user_id %>
                 <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: 'btn btn-outline-secondary' %>
-                <%= link_to '削除', "/posts/#{post.id}", method: :delete, class: 'btn btn-outline-secondary' %>
+                <%= link_to '削除', "/posts/#{post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, class: 'btn btn-outline-secondary' %>
               <% end %>
             </div>
+            <hr>
 
-
-
-              <hr>
           <% end %>
+
           <%= paginate(@posts) %>
         </div>
                 <%#参考 https://master.tech-camp.in/curriculums/3632#5 %>

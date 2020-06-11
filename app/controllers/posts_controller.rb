@@ -10,8 +10,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to action: 'index'
+    post = Post.new(post_params)
+    if post.save
+      redirect_to root_path, notice: '投稿が完了しました'
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -25,6 +29,11 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
+    # if post.update(post_params)
+    #   redirect_to action: 'show', notice: '編集が完了しました'
+    # else
+    #   render :edit #これを実装すると createにバグ発生
+    # end
     post.update(post_params)
     redirect_to action: 'show'
   end

@@ -1,17 +1,15 @@
-<div class ="contents row">
+<div class="contents row">
   <div class="container mt-4">
     <div class="more">
 
-      <div class="container">
-        投稿者：<a href="/users/<%= @post.user.id %>"><%= @post.user.name %></a><p></p>
-        タイトル：<%= @post.title %><p></p>
-        <%= @post.detail %><p></p>
-        <%= audio_tag @post.file, controls: true %><p></p>
-      </div>
+      投稿者：<a href="/users/<%= @post.user.id %>"><%= @post.user.name %></a><p></p>
+      タイトル：<%= @post.title %><p></p>
+      <%= @post.detail %><p></p>
+      <%= audio_tag @post.file, controls: true %><p>
 
       <% if user_signed_in? && current_user.id == @post.user_id %>
         <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get, :class=>"btn btn-outline-secondary" %>
-        <%= link_to '削除', "/posts/#{@post.id}", method: :delete, :class=>"btn btn-outline-secondary" %>
+        <%= link_to '削除', "/posts/#{@post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, :class=>"btn btn-outline-secondary" %>
       <% end %><p></p>
 
       <hr>
