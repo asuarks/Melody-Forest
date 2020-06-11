@@ -3,9 +3,9 @@
     <p><%= @name %>さんの投稿一覧</p>
 
     <% @posts.each do |post| %>
-      <%= simple_format(post.title) %>
-      <%= post.file %>
+      タイトル：<%= post.title %><p></p>
       <%= simple_format(post.detail) %>
+      <%= audio_tag post.file, controls: true %>
       <hr>
     <% end %>
     <%= paginate(@posts) %>

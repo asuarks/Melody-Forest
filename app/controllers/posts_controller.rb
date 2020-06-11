@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
+    redirect_to action: 'show'
   end
 
   def show

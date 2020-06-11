@@ -20,5 +20,6 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require audiojs
 
 //参考 https://qiita.com/NaokiIshimura/items/c8db09daefff5c11dadf

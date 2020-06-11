@@ -67,5 +67,6 @@ gem 'jquery-rails'
 gem 'kaminari' #ページネーション
 gem 'carrierwave' #https://qiita.com/tanakaworld/items/fbcd08eeccf826332f89
 gem 'carrierwave-audio'
+gem 'audiojs-rails'
 
 gem 'pry-rails'

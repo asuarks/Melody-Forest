@@ -40,20 +40,22 @@
         <div>
           <% @posts.each do |post| %>
 
-            <%= simple_format(post.title) %>
-              <%= post.file %>                  <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
+            タイトル：<%= post.title %>
+            <%= audio_tag post.file %><p></p>                  <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
             <div class="more">
                 <%= link_to '詳細', "/posts/#{post.id}", method: :get, class: 'btn btn-primary'%>
+
+              <span>投稿者</span>
+              <a href="/users/<%= post.user.id %>">
+                <%= post.user.name %></a>
+
               <% if user_signed_in? && current_user.id == post.user_id %>
                 <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: 'btn btn-outline-secondary' %>
                 <%= link_to '削除', "/posts/#{post.id}", method: :delete, class: 'btn btn-outline-secondary' %>
               <% end %>
             </div>
 
-              <span>投稿者</span>
-              <a href="/users/<%= post.user.id %>">
-                <%= post.user.name %>
-              </a>
+
 
               <hr>
           <% end %>
@@ -68,5 +70,12 @@
 <footer class="container">
   <p>Copyright © 2020</p>
 </footer>
+
+<!-- audiojsの初期化 -->
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
 
 <%#参考 https://getbootstrap.com/docs/4.5/examples/jumbotron/ %>

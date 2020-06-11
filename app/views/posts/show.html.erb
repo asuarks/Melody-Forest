@@ -3,23 +3,15 @@
     <div class="more">
 
       <div class="container">
-        <%= simple_format(@post.title) %>
-        <%= @post.file %><p></p>
+        投稿者：<a href="/users/<%= @post.user.id %>"><%= @post.user.name %></a><p></p>
+        タイトル：<%= @post.title %><p></p>
         <%= @post.detail %><p></p>
+        <%= audio_tag @post.file, controls: true %><p></p>
       </div>
 
       <% if user_signed_in? && current_user.id == @post.user_id %>
         <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get, :class=>"btn btn-outline-secondary" %>
         <%= link_to '削除', "/posts/#{@post.id}", method: :delete, :class=>"btn btn-outline-secondary" %>
-      <% end %><p></p>
-
-      <% if current_user %>
-        <%= form_with(model: [@post, @comment], local: true) do |form| %>
-          <%= form.text_area :text, placeholder: "コメントする", rows: "2" , :class=>"form-control" %><p></p>
-          <%= form.submit "送信", :class=>"btn btn-primary" %>
-        <% end %>
-      <% else %>
-        <strong><p>※コメントの投稿には新規登録/ログインが必要です</p></strong>
       <% end %><p></p>
 
       <hr>
@@ -33,6 +25,15 @@
           <% end %>
         <% end %>
       </div>
+
+      <% if current_user %>
+        <%= form_with(model: [@post, @comment], local: true) do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする", rows: "2" , :class=>"form-control" %><p></p>
+          <%= form.submit "送信", :class=>"btn btn-primary" %>
+        <% end %>
+      <% else %>
+        <strong><p>※コメントの投稿には新規登録/ログインが必要です</p></strong>
+      <% end %><p></p>
 
     </div>
   </div>
