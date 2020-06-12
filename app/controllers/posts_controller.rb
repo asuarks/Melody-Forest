@@ -20,7 +20,11 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
-    post.destroy
+    if post.destroy
+      redirect_to root_path, notice: '削除が完了しました'
+    else
+      render :index
+    end
   end
 
   def edit
