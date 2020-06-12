@@ -3,9 +3,12 @@
 // 参考 https://www.schemecolor.com/conditions-of-rest.php
 $theme-colors: (
   headder:#11551B, /* デフォルトにないカラーの追加 */
-  headder2: #3E8938,
   primary: #64AA36,
-  primary2:#F3FF83,
+  primary2:#B9E289,
+  back: #B8DD5A,
+  back-light: #E7F1DC,
+  
+  yellow:#F3FF83,
   primary3:#2B7B76,
   primary4:#134668
 );
@@ -43,6 +46,10 @@ $font-family-sans-serif:  Hiragino Kaku Gothic ProN,Meiryo,メイリオ, Arial, 
 
 span {
   color: #2B7B76;
+}
+
+body {
+  background-color: #B8DD5A;
 }
 
 // /*ページネーション自体のデザイン*/
