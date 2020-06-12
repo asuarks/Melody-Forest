@@ -110,7 +110,7 @@ button {
   letter-spacing: 3px;
   font-size: 11px;
   border-radius: 10px;
-  margin: auto;
+  // margin: auto;
   outline: none;
   display: block;
   &:hover {
@@ -195,8 +195,4 @@ input {
       opacity: 0;
     }
   }
-}
-
-body {
-  background: #B8DD5A;
 }

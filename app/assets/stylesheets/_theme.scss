@@ -13,6 +13,12 @@ $theme-colors: (
   primary4:#134668
 );
 
+$headder:#11551B;
+$primary:#64AA36;
+$primary2:#B9E289;
+$back: #D4F1BB;
+$back-light: #E7F1DC;
+
 /* font-familyを上書き */
 $font-family-sans-serif:  Hiragino Kaku Gothic ProN,Meiryo,メイリオ, Arial, sans-serif;
 //参考 https://homupedia.com/bootstrap4-how-to-customize-theme.html
@@ -43,6 +49,15 @@ $font-family-sans-serif:  Hiragino Kaku Gothic ProN,Meiryo,メイリオ, Arial, 
   text-shadow:0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A,0 0 3px #B8DD5A;  //太枠
 }
 
+
+.bg-back-light {
+  background-image: url("woodboard_m.jpg");
+  // text-align: center; 
+  // background-attachment: fixed;
+  padding-left: 4rem;
+  background-size: cover;
+  background-position: center 60%;
+}
 
 span {
   color: #2B7B76;

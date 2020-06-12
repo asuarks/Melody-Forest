@@ -20,17 +20,17 @@
       <div class="col-md-4">
         <h2>カッコいい</h2>
         <p> Cool系BGMのサンプルです。 </p>
-        <p><a class="btn btn-secondary" href="#" role="button">試聴する »</a></p>
+        <p><a class="btn btn-primary3" href="#" role="button">試聴する »</a></p>
       </div>
       <div class="col-md-4">
         <h2>明るい</h2>
         <p> 明るい系BGMのサンプルです。 </p>
-        <p><a class="btn btn-secondary" href="#" role="button">試聴する »</a></p>
+        <p><a class="btn btn-primary3" href="#" role="button">試聴する »</a></p>
       </div>
       <div class="col-md-4">
         <h2>癒し</h2>
         <p> 癒し系BGMのサンプルです。</p>
-        <p><a class="btn btn-secondary" href="#" role="button">試聴する »</a></p>
+        <p><a class="btn btn-primary3" href="#" role="button">試聴する »</a></p>
       </div>
     </div>
 
@@ -52,8 +52,8 @@
                   <%= post.user.name %></a>
 
                 <% if user_signed_in? && current_user.id == post.user_id %>
-                  <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: 'btn btn-outline-secondary' %>
-                  <%= link_to '削除', "/posts/#{post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, class: 'btn btn-outline-secondary' %>
+                  <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: 'btn btn-outline-primary3' %>
+                  <%= link_to '削除', "/posts/#{post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, class: 'btn btn-outline-primary3' %>
                 <% end %>
               </div>
               <hr>

@@ -20,6 +20,7 @@
 @import "theme"; //bootstrapより前に配置
 @import "bootstrap";
 @import "login"; //bootstrapより後に配置
+@import "background"; //bootstrapより後に配置
 @import "modules/flash";
 
 

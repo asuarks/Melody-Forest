@@ -8,8 +8,8 @@
       <%= audio_tag @post.file, controls: true %><p>
 
       <% if user_signed_in? && current_user.id == @post.user_id %>
-        <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get, :class=>"btn btn-outline-secondary" %>
-        <%= link_to '削除', "/posts/#{@post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, :class=>"btn btn-outline-secondary" %>
+        <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get, :class=>"btn btn-outline-primary3" %>
+        <%= link_to '削除', "/posts/#{@post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, :class=>"btn btn-outline-primary3" %>
       <% end %><p></p>
     </div>
 
