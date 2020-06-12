@@ -43,9 +43,10 @@
         </li>
 
         <% else %>
-        <li class="nav-item">
-          <%= link_to "新規登録", new_user_registration_path, class: 'nav-link' %>
-        </li>
+        <%# <li class="nav-item">
+          <%#= link_to "新規登録", new_user_registration_path, class: 'nav-link' %>
+        <%# </li> %>
+        
         <li class="nav-item">
           <%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-primary' %>
         </li>
@@ -65,9 +66,10 @@
         <%= render 'layouts/notifications' %>
         <%= yield %>
       </div>
-      <footer class="container">
-        <p class="float-right"><a href="/">Topへ戻る</a></p>
-      </div>
     </div>
   </body>
+
+  <footer class="float-right pt-4 pr-5">
+    <a href="/">Topへ戻る</a></p>
+  </footer>
 </html>

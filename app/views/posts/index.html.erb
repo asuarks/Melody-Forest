@@ -41,21 +41,23 @@
         
           <% @posts.each do |post| %>
 
-            タイトル：<%= post.title %>
-            <%= audio_tag post.file %><p></p>                  <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
-            <div class="more">
-                <%= link_to '詳細', "/posts/#{post.id}", method: :get, class: 'btn btn-primary'%>
+            <div class="bg-back-light">
+              <span>タイトル：</span><%= post.title %>
+              <%= audio_tag post.file %><p></p>                  <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
+              <div class="more">
+                  <%= link_to '詳細', "/posts/#{post.id}", method: :get, class: 'btn btn-primary'%>
 
-              <span>投稿者</span>
-              <a href="/users/<%= post.user.id %>">
-                <%= post.user.name %></a>
+                <span>投稿者</span>
+                <a href="/users/<%= post.user.id %>">
+                  <%= post.user.name %></a>
 
-              <% if user_signed_in? && current_user.id == post.user_id %>
-                <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: 'btn btn-outline-secondary' %>
-                <%= link_to '削除', "/posts/#{post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, class: 'btn btn-outline-secondary' %>
-              <% end %>
+                <% if user_signed_in? && current_user.id == post.user_id %>
+                  <%= link_to '編集', "/posts/#{post.id}/edit", method: :get, class: 'btn btn-outline-secondary' %>
+                  <%= link_to '削除', "/posts/#{post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, class: 'btn btn-outline-secondary' %>
+                <% end %>
+              </div>
+              <hr>
             </div>
-            <hr>
 
           <% end %>
 
@@ -67,9 +69,10 @@
 
 </main>
 
-<footer class="container">
-  <p>Copyright © 2020</p>
-</footer>
+
+  <footer class="container pt-3">
+    <p>Copyright © 2020</p>
+  </footer>
 
 <!-- audiojsの初期化 -->
 <script>

@@ -46,27 +46,27 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
     
-        <div class="form-group">
+        <div class="form-group pl-4 pr-4">
           <%= f.label :name, "ニックネーム" %> <span class="small">(最大<%= 20 %>字まで)</span>
-          <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control" %>
+          <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control", placeholder: "name" %>
         </div>
 
-        <div class="form-group">
+        <div class="form-group pl-4 pr-4">
           <%= f.label :email, "メールアドレス", :class => "form-label" %>
-          <%= f.email_field :email, autocomplete: "email", :class => "form-control" %>
+          <%= f.email_field :email, autocomplete: "email", :class => "form-control", placeholder: "mail address" %>
         </div>
 
-        <div class="form-group"> 
+        <div class="form-group pl-4 pr-4"> 
           <%= f.label :password, "パスワード", :class => "form-label" %> <span class="small">(最低<%= 6 %>文字以上)</span>
-          <%= f.password_field :password, :class => "form-control" %>  <%# @minimum_password_length %>
+          <%= f.password_field :password, :class => "form-control", placeholder: "password" %>  <%# @minimum_password_length %>
         </div>
     
-        <div class="form-group">
+        <div class="form-group pl-4 pr-4">
           <%= f.label :password_confirmation, "もう一度パスワードを入力してください", :class => "form-label" %>
-          <%= f.password_field :password_confirmation, :class => "form-control" %>
+          <%= f.password_field :password_confirmation, :class => "form-control", placeholder: "password"%>
         </div>
     
-        <div class="actions">
+        <div class="actions pl-4 pr-4">
           <%= f.submit "アカウント作成", :class => "btn btn-headder btn-block" %>
         </div>
         <% end %>
@@ -88,15 +88,15 @@
         </form> %>
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-group">
+          <div class="form-group pl-4 pr-4">
             <%= f.label :email, "メールアドレス", :class => "form-label" %>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control", placeholder: "mail adress"%>
           </div>
     
-          <div class="form-group">
+          <div class="form-group pl-4 pr-4">
             <%= f.label :password, "パスワード", :class => "form-label" %>
             <%# <%= link_to "パスワードを忘れた場合", new_user_password_path, :class => "float-right" %>
-            <%= f.password_field :password, :class => "form-control" %>
+            <%= f.password_field :password, :class => "form-control", placeholder: "password" %>
             
           <% if devise_mapping.rememberable? %>
             <div class="form-check">
@@ -106,7 +106,7 @@
           <% end %>
         </div>
     
-          <div class="actions">
+          <div class="actions pl-4 pr-4">
             <%= f.submit "ログイン", :class => "btn btn-headder btn-block" %>
             <% end %>
           </div>

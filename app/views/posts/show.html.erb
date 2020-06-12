@@ -1,9 +1,9 @@
 <div class="contents row">
   <div class="container mt-4">
-    <div class="more">
+    <div class="more bg-back-light">
 
-      投稿者：<a href="/users/<%= @post.user.id %>"><%= @post.user.name %></a><p></p>
-      タイトル：<%= @post.title %><p></p>
+      <span>投稿者：</span><a href="/users/<%= @post.user.id %>"><%= @post.user.name %></a><p></p>
+      <span>タイトル：</span><%= @post.title %><p></p>
       <%= @post.detail %><p></p>
       <%= audio_tag @post.file, controls: true %><p>
 
@@ -11,6 +11,7 @@
         <%= link_to '編集', "/posts/#{@post.id}/edit", method: :get, :class=>"btn btn-outline-secondary" %>
         <%= link_to '削除', "/posts/#{@post.id}", method: :delete, data:{ confirm: '本当に削除しますか？' }, :class=>"btn btn-outline-secondary" %>
       <% end %><p></p>
+    </div>
 
       <hr>
       <div class="comments">
@@ -33,7 +34,6 @@
         <strong><p>※コメントの投稿には新規登録/ログインが必要です</p></strong>
       <% end %><p></p>
 
-    </div>
   </div>
 </div>
 

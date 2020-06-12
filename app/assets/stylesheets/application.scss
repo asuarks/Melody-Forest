@@ -17,9 +17,9 @@
 // Bootstrap
 // @import "bootstrap-sprockets";
 @import "reset";
-@import "theme";
+@import "theme"; //bootstrapより前に配置
 @import "bootstrap";
-@import "login";
+@import "login"; //bootstrapより後に配置
 @import "modules/flash";
 
 
