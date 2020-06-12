@@ -1,10 +1,7 @@
-// $gray: #8E9AAF;
-
 $headder:#11551B;
 $primary:#64AA36;
 $primary2:#B9E289;
 $back: #D4F1BB;
-// $pink: darken($primary, 20%);
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
 
@@ -146,4 +143,60 @@ input[type=checkbox] {
 
 .checkbox input[type="checkbox"]:checked + label {
   transition: .5s all ease;
+}
+
+.form-control {
+  // background: $primary2; // textboxの背景色
+  // width: 65%;    // 入力フォームの幅
+  color: $headder;  // 入力後の文字色
+  border: none;
+  border-bottom: 1px solid rgba($back, 0.5);
+  // padding: 9px;
+  // margin: 7px;
+  &::placeholder {
+    color: rgba($back, 1); //placeholderの色
+    // letter-spacing: 2px;
+    font-size: 1.1em; // placeholderの文字サイズ
+    // font-weight: 100;
+  }
+  &:focus {
+    color: $headder; // 入力時の文字色
+    outline: none;
+    border-bottom: 1.2px solid rgba($headder, 0.7); //入力中の下線の色
+    font-size: 1.1em; //入力中の文字サイズ
+    // transition: .8s all ease; //
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+input {
+  // background: $primary; // ファイル選択フォームの背景色
+  // width: 65%; ボタンの幅
+  color: $primary; //ファイル選択フォームの文字色
+  border: none;
+  border-bottom: 1px solid rgba($back, 0.5);
+  // padding: 9px;
+  // margin: 7px;
+  &::placeholder {
+    color: rgba($back, 1);
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    font-weight: 100;
+  }
+  &:focus {
+    color: $primary;
+    outline: none;
+    border-bottom: 1.2px solid rgba($primary, 0.7);
+    font-size: 1em;
+    transition: .8s all ease;
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
+
+body {
+  background: #B8DD5A;
 }

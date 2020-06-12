@@ -47,23 +47,23 @@
         <%= render "devise/shared/error_messages", resource: resource %>
     
         <div class="form-group pl-4 pr-4">
-          <%= f.label :name, "ニックネーム" %> <span class="small">(最大<%= 20 %>字まで)</span>
-          <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control", placeholder: "name" %>
+          <span class="small"><%= f.label :name %> (最大<%= 20 %>字まで)</span>
+          <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control bg-primary", placeholder: "name" %>
         </div>
 
         <div class="form-group pl-4 pr-4">
-          <%= f.label :email, "メールアドレス", :class => "form-label" %>
-          <%= f.email_field :email, autocomplete: "email", :class => "form-control", placeholder: "mail address" %>
+          <span class="small"><%= f.label :email, :class => "form-label" %></span>
+          <%= f.email_field :email, autocomplete: "email", :class => "form-control bg-primary", placeholder: "mail address" %>
         </div>
 
         <div class="form-group pl-4 pr-4"> 
-          <%= f.label :password, "パスワード", :class => "form-label" %> <span class="small">(最低<%= 6 %>文字以上)</span>
-          <%= f.password_field :password, :class => "form-control", placeholder: "password" %>  <%# @minimum_password_length %>
+          <span class="small"><%= f.label :password, :class => "form-label" %> (最低<%= 6 %>文字以上)</span>
+          <%= f.password_field :password, :class => "form-control bg-primary", placeholder: "password" %>  <%# @minimum_password_length %>
         </div>
     
         <div class="form-group pl-4 pr-4">
-          <%= f.label :password_confirmation, "もう一度パスワードを入力してください", :class => "form-label" %>
-          <%= f.password_field :password_confirmation, :class => "form-control", placeholder: "password"%>
+          <span class="small"><%= f.label :password_confirmation, :class => "form-label" %></span>
+          <%= f.password_field :password_confirmation, :class => "form-control bg-primary", placeholder: "confirm password"%>
         </div>
     
         <div class="actions pl-4 pr-4">
@@ -89,14 +89,14 @@
 
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group pl-4 pr-4">
-            <%= f.label :email, "メールアドレス", :class => "form-label" %>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control", placeholder: "mail adress"%>
+            <span class="small"><%= f.label :email, :class => "form-label" %></span>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control bg-primary", placeholder: "mail adress"%>
           </div>
     
           <div class="form-group pl-4 pr-4">
-            <%= f.label :password, "パスワード", :class => "form-label" %>
+            <span class="small"><%= f.label :password, :class => "form-label" %></span>
             <%# <%= link_to "パスワードを忘れた場合", new_user_password_path, :class => "float-right" %>
-            <%= f.password_field :password, :class => "form-control", placeholder: "password" %>
+            <%= f.password_field :password, :class => "form-control bg-primary", placeholder: "password" %>
             
           <% if devise_mapping.rememberable? %>
             <div class="form-check">
