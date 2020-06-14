@@ -8,6 +8,7 @@
       <span>タイトル：</span><%= post.title %><p></p>
       <%= simple_format(post.detail) %>
       <%= audio_tag post.file, controls: true %><p>
+      <%= link_to '詳細', "/posts/#{post.id}", method: :get, class: 'btn btn-primary'%>
     </div>
 
       <% if user_signed_in? && current_user.id == post.user_id %>

@@ -54,7 +54,11 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index, notice: 'ログインが必要です' unless user_signed_in?
+    redirect_to action: :index unless user_signed_in?
+    unless user_signed_in?
+      flash[:alert] = 'ログインが必要です'
+    else
+    end
   end
 
 end

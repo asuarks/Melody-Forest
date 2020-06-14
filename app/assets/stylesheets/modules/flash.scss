@@ -17,5 +17,21 @@ $alert_orange: #F35500;
     background-color: $alert_orange;
     color: $white;
     text-align: center;
+
+    // 下記bootstrapの装飾を打ち消すため記述
+    padding: 0rem;
+    margin-bottom: 0rem;
+    border: 0px solid transparent;
+    border-radius: 0rem;
   }
 }
+
+// .rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/bootstrap-4.1.3/assets/stylesheets/bootstrap/_alert.scss */
+
+// .alert {
+//   position: relative;
+//   padding: 0.75rem 1.25rem;
+//   margin-bottom: 1rem;
+//   border: 1px solid transparent;
+//   border-radius: 0.25rem;
+// }
