@@ -43,7 +43,7 @@
         <!-- アバターファイルの表示 -->
         <div class="d-flex flex-column">
           <%= image_tag current_user.profile.avatar.to_s, :class => "float-center border mb-2 mx-auto" %>
-            編集
+          <%= link_to "編集", edit_account_avatar_path %>
       </div>
     </div>
   </div>

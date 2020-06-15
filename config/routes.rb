@@ -3,12 +3,10 @@ Rails.application.routes.draw do
     get 'avatars/edit'
     get 'avatars/update'
   end
-  # namespace :accounts do
-  #   get 'names/edit'
-  #   get 'names/update'
-  # end
+
     resource :account, :only => [:show] do
       resource :name, :only => [:edit, :update], module: "accounts"
+      resource :avatar, :only => [:edit, :update], module: "accounts"
     end
 
     # devise_for :users

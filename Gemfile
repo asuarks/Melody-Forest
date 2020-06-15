@@ -69,4 +69,6 @@ gem 'carrierwave' #https://qiita.com/tanakaworld/items/fbcd08eeccf826332f89
 gem 'carrierwave-audio'
 gem 'audiojs-rails'
 
+gem 'mini_magick'
+
 gem 'pry-rails'
