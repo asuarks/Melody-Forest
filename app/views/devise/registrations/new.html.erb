@@ -6,22 +6,22 @@
 
     <div class="form-group">
       <%= f.label :name, "ニックネーム" %> <span class="small">(最大<%= 20 %>字まで)</span>
-      <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control" %>
+      <%= f.text_field :name, autofocus: true, maxlength: "20" %>
     </div>
 
     <div class="form-group">
       <%= f.label :email, "メールアドレス", :class => "form-label" %>
-      <%= f.email_field :email, autocomplete: "email", :class => "form-control" %>
+      <%= f.email_field :email, autocomplete: "email" %>
     </div>
  
     <div class="form-group">
       <%= f.label :password, "パスワード" %@minimum_password_length, :class => "form-label" %> <span class="small">(最低<%= @minimum_password_length %>文字以上)</span>
-      <%= f.password_field :password, :class => "form-control" %>
+      <%= f.password_field :password %>
     </div>
  
     <div class="form-group">
       <%= f.label :password_confirmation, "もう一度パスワードを入力してください", :class => "form-label" %>
-      <%= f.password_field :password_confirmation, :class => "form-control" %>
+      <%= f.password_field :password_confirmation %>
     </div>
  
     <div class="actions">

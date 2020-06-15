@@ -65,10 +65,16 @@ $serif: 'Lora', serif;
   padding-left: 4rem;
   background-size: cover;
   background-position: center 60%;
+  border-radius: 10px;
 }
 
 span {
   color: #2B7B76;
+}
+
+// プレイヤーの角を丸く変更
+.audiojs {
+  border-radius: 10px;
 }
 
 

@@ -30,114 +30,116 @@
 <%# </div> %>
 
 <body>
-<div class="container">
-  <div class="welcome">
-    <div class="greenbox">
-      <div class="signup nodisplay">
-        <h2>新規登録</h2>
+  <div class="container">
+    <div class="welcome">
+      <div class="greenbox">
+        <div class="signup nodisplay">
+          <h2>新規登録</h2>
 
-        <%# <form autocomplete="off">
-          <input type="text" placeholder="username">
-          <input type="email" placeholder="email">
-          <input type="password" placeholder="password">
-          <input type="password" placeholder="confirm password">
-          <button class="button submit">アカウントを作成</button>
-        </form> %>
+          <%# <form autocomplete="off">
+            <input type="text" placeholder="username">
+            <input type="email" placeholder="email">
+            <input type="password" placeholder="password">
+            <input type="password" placeholder="confirm password">
+            <button class="button submit">アカウントを作成</button>
+          </form> %>
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-    
-        <div class="form-group pl-4 pr-4">
-          <span class="small"><%= f.label :name %> (最大<%= 20 %>字まで)</span>
-          <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control bg-primary", placeholder: "name" %>
-        </div>
-
-        <div class="form-group pl-4 pr-4">
-          <span class="small"><%= f.label :email, :class => "form-label" %></span>
-          <%= f.email_field :email, autocomplete: "email", :class => "form-control bg-primary", placeholder: "mail address" %>
-        </div>
-
-        <div class="form-group pl-4 pr-4"> 
-          <span class="small"><%= f.label :password, :class => "form-label" %> (最低<%= 6 %>文字以上)</span>
-          <%= f.password_field :password, :class => "form-control bg-primary", placeholder: "password" %>  <%# @minimum_password_length %>
-        </div>
-    
-        <div class="form-group pl-4 pr-4">
-          <span class="small"><%= f.label :password_confirmation, :class => "form-label" %></span>
-          <%= f.password_field :password_confirmation, :class => "form-control bg-primary", placeholder: "confirm password"%>
-        </div>
-    
-        <div class="actions pl-4 pr-4">
-          <%= f.submit "アカウント作成", :class => "btn btn-headder btn-block" %>
-        </div>
-        <% end %>
-
-      </div>
-
-
-
-      <div class="signin">
-        <h2>ログイン</h2>
-
-        <%# <form class="more-padding" autocomplete="off">
-          <input type="text" placeholder="username">
-          <input type="password" placeholder="password">
-          <div class="checkbox">
-            <input type="checkbox" id="remember" /><label for="remember">remember me</label>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+      
+          <div class="form-group pl-4 pr-4">
+            <span class="small"><%= f.label :name %> (最大<%= 20 %>字まで)</span>
+            <%= f.text_field :name, autofocus: true, maxlength: "20" , :class => "form-control bg-primary", placeholder: "name" %>
           </div>
-          <button class="button submit">ログイン</button>
-        </form> %>
 
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group pl-4 pr-4">
             <span class="small"><%= f.label :email, :class => "form-label" %></span>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control bg-primary", placeholder: "mail adress"%>
+            <%= f.email_field :email, autocomplete: "email", :class => "form-control bg-primary", placeholder: "mail address" %>
           </div>
-    
+
+          <div class="form-group pl-4 pr-4"> 
+            <span class="small"><%= f.label :password, :class => "form-label" %> (最低<%= 6 %>文字以上)</span>
+            <%= f.password_field :password, :class => "form-control bg-primary", placeholder: "password" %>  <%# @minimum_password_length %>
+          </div>
+      
           <div class="form-group pl-4 pr-4">
-            <span class="small"><%= f.label :password, :class => "form-label" %></span>
-            <%# <%= link_to "パスワードを忘れた場合", new_user_password_path, :class => "float-right" %>
-            <%= f.password_field :password, :class => "form-control bg-primary", placeholder: "password" %>
-            
-          <% if devise_mapping.rememberable? %>
-            <div class="form-check">
-              <%= f.check_box :remember_me, :class => "form-check-input" %>
-              <%= f.label :remember_me, "ログインを記憶", :class => "form-check-label" %>
-            </div>
-          <% end %>
-        </div>
-    
+            <span class="small"><%= f.label :password_confirmation, :class => "form-label" %></span>
+            <%= f.password_field :password_confirmation, :class => "form-control bg-primary", placeholder: "confirm password"%>
+          </div>
+      
           <div class="actions pl-4 pr-4">
-            <%= f.submit "ログイン", :class => "btn btn-headder btn-block" %>
+            <%= f.submit "アカウント作成", :class => "btn btn-headder btn-block" %>
+          </div>
+          <% end %>
+
+        </div>
+
+
+
+        <div class="signin">
+          <h2>ログイン</h2>
+
+          <%# <form class="more-padding" autocomplete="off">
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+            <div class="checkbox">
+              <input type="checkbox" id="remember" /><label for="remember">remember me</label>
+            </div>
+            <button class="button submit">ログイン</button>
+          </form> %>
+
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group pl-4 pr-4">
+              <span class="small"><%= f.label :email, :class => "form-label" %></span>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control bg-primary", placeholder: "mail adress"%>
+            </div>
+      
+            <div class="form-group pl-4 pr-4">
+              <span class="small"><%= f.label :password, :class => "form-label" %></span>
+              <%# <%= link_to "パスワードを忘れた場合", new_user_password_path, :class => "float-right" %>
+              <%= f.password_field :password, :class => "form-control bg-primary", placeholder: "password" %>
+              
+            <% if devise_mapping.rememberable? %>
+              <div class="form-check">
+                <%= f.check_box :remember_me, :class => "form-check-input" %>
+                <%= f.label :remember_me, "ログインを記憶", :class => "form-check-label" %>
+              </div>
             <% end %>
           </div>
+      
+            <div class="actions pl-4 pr-4">
+              <%= f.submit "ログイン", :class => "btn btn-headder btn-block" %>
+              <% end %>
+            </div>
 
 
+        </div>
       </div>
+
+
+
+
+
+      <div class="leftbox">
+        <h2 class="title">Melody<br>Forest</h2>
+        <img class="flower smaller" src="https://i.gyazo.com/41577f62af106bdea2d0f3a9ecfc8506.png" alt="1357d638624297b" border="0">
+        <%# <div class="flower-smaller"></div> %>
+
+        <p class="account">既にアカウントをお持ちの場合はこちら</p>
+        <button class="button mx-auto" id="signin">ログイン</button>
+      </div>
+
+
+      <div class="rightbox">
+        <h2 class="title">Melody<br>Forest</h2>
+        <img class="flower" src="https://i.gyazo.com/2370d222b870e6673ab335496eac2f07.png"/>
+        <%# <div class="flower"></div> %>
+        <p class="account">アカウントをお持ちでない場合はこちら</p>
+        <button class="button mx-auto" id="signup">新規登録</button>
+      </div>
+
+
     </div>
-
-
-
-
-
-    <div class="leftbox">
-      <h2 class="title">Melody<br>Forest</h2>
-      <img class="flower smaller" src="https://i.gyazo.com/41577f62af106bdea2d0f3a9ecfc8506.png" alt="1357d638624297b" border="0">
-      <%# <div class="flower-smaller"></div> %>
-
-      <p class="account">既にアカウントをお持ちの場合はこちら</p>
-      <button class="button mx-auto" id="signin">ログイン</button>
-    </div>
-
-
-    <div class="rightbox">
-      <h2 class="title">Melody<br>Forest</h2>
-      <img class="flower" src="https://i.gyazo.com/2370d222b870e6673ab335496eac2f07.png"/>
-      <%# <div class="flower"></div> %>
-      <p class="account">アカウントをお持ちでない場合はこちら</p>
-      <button class="button mx-auto" id="signup">新規登録</button>
-    </div>
-
-
   </div>
- </div>
+
+ <body>
