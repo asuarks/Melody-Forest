@@ -41,9 +41,10 @@
 
       <div class="col-sm-4">
         <!-- アバターファイルの表示 -->
-        <div class="d-flex flex-column">
-          <%= image_tag current_user.profile.avatar.to_s, :class => "float-center border mb-2 mt-4 mx-auto" %>
-          <%= link_to "プロフィール画像変更", edit_account_avatar_path, :class => "btn btn-primary" %><br>
+        <div class="account-profile-image d-flex flex-column">
+          <%= image_tag current_user.profile.avatar.to_s, 
+              :class => "float-center border mb-2 mt-2 mx-auto" %>
+          <%= link_to "アバターを変更", edit_account_avatar_path, :class => "btn btn-primary" %><br>
       </div>
     </div>
   </div>

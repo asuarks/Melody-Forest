@@ -1,6 +1,8 @@
 <%# <h1>Accounts::Avatars#edit</h1>
 <p>Find me in app/views/accounts/avatars/edit.html.erb</p> %>
 
+<%# アバター画像が 192px 四方で画像の中央で切り取られて表示されるよう設定 %>
+
 <div class="card col-sm-10 mt-5 mx-auto px-0">
   <div class="card-header bg-white">
     <H3>プロフィール画像を変更する</h3>
@@ -9,14 +11,14 @@
     <%= form_with(model: @profile, url: account_avatar_path, method: :put, local: true) do |form| %>
     <div class="form-group row">
       <div class="col-sm-4">
-        <div class="account-profile-img mb-3">
+        <div class="account-profile-image mb-3">
           <%= image_tag @profile.avatar.to_s, :id => "avatar-prev" %>
+          <% if @profile.avatar? %>
+            <label><%= form.check_box :remove_avatar %> 画像を削除する</label>
+          <% else %>
+            <%= form.hidden_field :avatar_cache %>
+          <% end %>
         </div>
-        <% if @profile.avatar? %>
-        <label><%= form.check_box :remove_avatar %> 画像を削除する</label>
-        <% else %>
-        <%= form.hidden_field :avatar_cache %>
-        <% end %>
       </div>
       <div class="col-sm-8">
         <%= form.file_field :avatar, :id => "avatar-img", :class => "form-control-file" %>
@@ -30,3 +32,25 @@
   </div>
   <% end %>
 </div>
+
+
+<%# id: avatar-img を持つ file_field に変更があったというイベントを受けて、
+ id: avatar-prev の画像を更新する javascript %>
+<%# 以下によりアップロード時に画像を確認できるようになる %>
+
+<script type="text/javascript">
+$(function() {
+ function readURL(input) {
+   if (input.files && input.files[0]) {
+     var reader = new FileReader();
+     reader.onload = function (e) {
+       $('#avatar-prev').attr('src', e.target.result);
+     }
+     reader.readAsDataURL(input.files[0]);
+   }
+ }
+ $("#avatar-img").change(function(){
+   readURL(this);
+ });
+});
+</script>

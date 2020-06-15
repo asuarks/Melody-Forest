@@ -1,3 +1,16 @@
 // Place all the styles related to the accounts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* センタリング */
+.account-profile-image {
+    text-align: center;
+}
+ 
+/* 画像サイズを 192px 四方に設定して、object-fit: cover で真ん中で切り抜き */
+.account-profile-image img {
+    height: 192px;
+    width: 192px;
+    object-fit: cover;
+    border-radius: 0.7rem;
+}

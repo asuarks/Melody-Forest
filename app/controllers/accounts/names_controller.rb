@@ -10,7 +10,7 @@ class Accounts::NamesController < ApplicationController
           if @profile.update(profile_params)
               format.html {
                   redirect_to account_path,
-                  notice: "Profile was successfully updated."
+                  notice: "Profileの更新が完了しました."
               }
           else
               format.html {
