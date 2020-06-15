@@ -1,7 +1,7 @@
 <%# <h1>Accounts#show</h1>
 <p>Find me in app/views/accounts/show.html.erb</p> %>
 
-<div class="card col-sm-10 mx-auto mt-5 px-0">
+<div class="card col-sm-10 mx-auto mt-5">
   <div class="card-header bg-white">
     <h2>アカウント情報</h2>
   </div>
@@ -13,7 +13,7 @@
             <tr>
               <td>名前:</td>
               <td><%= current_user.profile.name %></td>
-              <td>編集</td>
+              <td><%= link_to "編集", edit_account_name_path %></td>
             </tr>
             <tr>
               <td>ユーザID:</td>
@@ -42,8 +42,8 @@
       <div class="col-sm-4">
         <!-- アバターファイルの表示 -->
         <div class="d-flex flex-column">
-          <%= image_tag current_user.profile.avatar.to_s, :class => "float-center border mb-2 mx-auto" %>
-          <%= link_to "編集", edit_account_avatar_path %>
+          <%= image_tag current_user.profile.avatar.to_s, :class => "float-center border mb-2 mt-4 mx-auto" %>
+          <%= link_to "プロフィール画像変更", edit_account_avatar_path, :class => "btn btn-primary" %><br>
       </div>
     </div>
   </div>

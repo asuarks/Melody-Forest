@@ -39,7 +39,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown03">
               <%= link_to "マイページ", "/users/#{current_user.id}", class: 'dropdown-item' %>
               <%= link_to "ログアウト", destroy_user_session_path, class: 'dropdown-item', method: :delete %>
-              <%= link_to "編集", edit_account_name_path, class: 'dropdown-item' %>
+              <%= link_to "アカウント編集", account_path, class: 'dropdown-item' %>
             </div>
           </li>
         </ul>
