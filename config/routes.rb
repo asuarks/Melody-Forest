@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # namespace :accounts do
+  #   get 'names/edit'
+  #   get 'names/update'
+  # end
     resource :account, :only => [:show] do
       resource :name, :only => [:edit, :update], module: "accounts"
     end
