@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resource :account, :only => [:show]
+    resource :account, :only => [:show] do
+      resource :name, :only => [:edit, :update], module: "accounts"
+    end
 
     # devise_for :users
     devise_for :users, controllers: {
