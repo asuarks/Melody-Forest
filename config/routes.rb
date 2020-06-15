@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :accounts do
+    get 'avatars/edit'
+    get 'avatars/update'
+  end
   # namespace :accounts do
   #   get 'names/edit'
   #   get 'names/update'

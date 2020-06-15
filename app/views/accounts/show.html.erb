@@ -38,8 +38,12 @@
           </tbody>
         </table>
       </div>
+
       <div class="col-sm-4">
-        <div class="d-flex flex-column">編集</div>
+        <!-- アバターファイルの表示 -->
+        <div class="d-flex flex-column">
+          <%= image_tag current_user.profile.avatar.to_s, :class => "float-center border mb-2 mx-auto" %>
+            編集
       </div>
     </div>
   </div>
