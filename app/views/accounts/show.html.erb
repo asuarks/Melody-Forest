@@ -10,31 +10,28 @@
       <div class="col-sm-8">
         <table class="table">
           <tbody>
-            <tr>
-              <td>名前:</td>
-              <td><%= current_user.profile.name %></td>
-              <td><%= link_to "編集", edit_account_name_path %></td>
-            </tr>
-            <tr>
-              <td>ユーザID:</td>
+
+              <%# <td>名前:</td> %>
+              <%# <td><%= current_user.profile.name %></td>
+              <%# <td><%= link_to "編集", edit_account_name_path %></td>
+
+              <td>Name:</td>
               <td><%= current_user.name %></td>
-              <td>編集</td>
-            </tr>
+              <td><%= link_to "編集", edit_user_registration_path, :class => "btn btn-primary"%></td>
+
             <tr>
-              <td>メールアドレス:</td>
+              <td>Eメール:</td>
               <td><%= current_user.email %></td>
-              <td>編集</td>
             </tr>
             <tr>
               <td>パスワード:</td>
               <td>(非表示)</td>
-              <td>編集</td>
             </tr>
-            <tr>
+            <%# <tr>
               <td>自己紹介:</td>
               <td><%= current_user.profile.description %></td>
-              <td>編集</td>
-            </tr>
+              <%# <td><%= link_to "編集", edit_user_registration_path, :class => "btn btn-primary"%></td>
+            <%# </tr> %>
           </tbody>
         </table>
       </div>
