@@ -41,8 +41,9 @@
         
           <% @posts.each do |post| %>
 
+            投稿日時：<%= l post.created_at, format: :long %>
             <div class="bg-back-light">
-              <span>タイトル：</span><%= post.title %>
+              <span>タイトル：</span><font color="primary"><%= post.title %></font>
               <%= audio_tag post.file %><p></p>                  <%#参考 https://master.tech-camp.in/curriculums/3630#17 %>
               <div class="more">
                   <%= link_to '詳細', "/posts/#{post.id}", method: :get, class: 'btn btn-primary'%>

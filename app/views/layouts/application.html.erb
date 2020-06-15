@@ -29,18 +29,19 @@
 
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to  "投稿", "/posts/new", class: "nav-link" %>
+          <%= link_to "投稿", "/posts/new", class: "nav-link" %>
         </li>
 
-        <li class="nav-item">
-          <%= link_to "マイページ", "/users/#{current_user.id}", class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "ログアウト", destroy_user_session_path, class: 'nav-link', method: :delete %>
-        </li>
-        <li class="nav-item">
-          <%= "#{current_user.name}" %>
-        </li>
+      <div class="collapse navbar-collapse" id="navbarsExample03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= "#{current_user.name}" %></a>
+            <div class="dropdown-menu" aria-labelledby="dropdown03">
+              <%= link_to "マイページ", "/users/#{current_user.id}", class: 'dropdown-item' %>
+              <%= link_to "ログアウト", destroy_user_session_path, class: 'dropdown-item', method: :delete %>
+            </div>
+          </li>
+        </ul>
 
         <% else %>
         <%# <li class="nav-item">
@@ -53,7 +54,7 @@
       <% end %>
     </ul>
 
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-lg-0 ">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
       <button class="btn btn-primary my-2 my-sm-0" type="submit">検索</button>
     </form>

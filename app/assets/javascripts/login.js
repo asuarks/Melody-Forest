@@ -1,4 +1,4 @@
-window.onload = function(){
+window.addEventListener('DOMContentLoaded', function(){
 
 $('#signup').click(function() {
   $('.greenbox').css('transform', 'translateX(80%)');
@@ -12,4 +12,4 @@ $('#signin').click(function() {
   $('.signin').removeClass('nodisplay');
 });
 
-};
+});
