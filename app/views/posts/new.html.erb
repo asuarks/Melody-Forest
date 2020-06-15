@@ -4,12 +4,16 @@
       投稿する
     </h3>
     <%= form_with(model: @post, local: true, multipart: true) do |form| %>
-      <%= form.text_field :title, placeholder: "title" , :class=>"form-control"%><p></p>
-      <%# <%= form.text_field :file, placeholder: "File" , :class=>"form-control"%><p></p>
-      <%= form.file_field :file, :class=>"form-control-file" %><p></p>
-      <%= form.text_area :detail, placeholder: "detail" , rows: "3", :class=>"form-control" %><p></p>
-      <%= form.submit "送信", :class=>"btn btn-primary" %><p></p>
-    <% end %>
+      <div class="more bg-back-light pr-5">
+        <span>タイトル</span>
+        <%= form.text_field :title, placeholder: "title" , :class=>"form-control"%><p></p>
+        <%# <%= form.text_field :file, placeholder: "File" , :class=>"form-control"%><p></p>
+        <%= form.file_field :file, :class=>"form-control-file" %><p></p>
+        <span>詳細</span>
+        <%= form.text_area :detail, placeholder: "detail" , rows: "3", :class=>"form-control" %><p></p>
+        <%= form.submit "送信", :class=>"btn btn-primary" %><p></p>
+      <% end %><hr><p></p>
+    </div>
     <a href="/posts">Back</a>
   </div>
 </div>
