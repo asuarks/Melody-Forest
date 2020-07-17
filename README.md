@@ -1,12 +1,10 @@
-# README
-
 ## 🌐 App URL
 [https://melody-forest.herokuapp.com](https://melody-forest.herokuapp.com)
 
 
 ## Test Account
-Eメール：test@test
-パスワード：testtest
+Eメール：test@test<p></p>
+パスワード：testtest<p></p>
 
 
 ## Environment
@@ -121,14 +119,14 @@ Eメール：test@test
 
 
 ## 💬 Usage
-ローカルで確認する場合は以下の操作を行います。
-`$ git clone https://github.com/asuarks/Melody-Forest.git`
-`$ cd hoge`
-`$ bundle install`
-`$ rails db:create`
-`$ rails db:migrate`
-`$ rails s`
-以下にアクセス
+ローカルで確認する場合は以下の操作を行います。<p></p>
+`$ git clone https://github.com/asuarks/Melody-Forest.git`<p></p>
+`$ cd hoge`<p></p>
+`$ bundle install`<p></p>
+`$ rails db:create`<p></p>
+`$ rails db:migrate`<p></p>
+`$ rails s`<p></p>
+以下にアクセス<p></p>
 http://localhost:3000
 
 
@@ -147,7 +145,6 @@ http://localhost:3000
 #### Association
 belongs_to :user
 has_many :comment
-<!-- validates :title, :file, presence: true -->
 
 ### usersテーブル
 |Column|Type|Options|
@@ -158,7 +155,6 @@ has_many :comment
 #### Association
 - has_many :posts
 - has_many :comments
-<!-- validates :name, presence: true -->
 
 ### commentsテーブル
 |Column|Type|Options|
@@ -169,7 +165,6 @@ has_many :comment
 #### Association
 belongs_to :post
 belongs_to :user
-<!-- validates :text, presence: true -->
 
 ### profilesテーブル
 |Column|Type|Options|
