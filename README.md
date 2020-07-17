@@ -29,7 +29,7 @@ Eメール：test@test<p></p>
 ## Function
 ### 1. Home
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87685290-2cf21e00-c7be-11ea-867c-d1f0f4f8df00.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87685290-2cf21e00-c7be-11ea-867c-d1f0f4f8df00.png" alt="Home" width="50%" height="50%">  
 </p>
 <ul>
   <li>投稿データ一覧を確認し、再生できます。</li>
@@ -38,7 +38,7 @@ Eメール：test@test<p></p>
 
 ### 2. 詳細・コメント
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87700849-f6260300-c7d1-11ea-9952-7a88551da98c.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87700849-f6260300-c7d1-11ea-9952-7a88551da98c.png" alt="detail・comment" width="50%" height="50%">
 </p>
 <ul>
   <li>詳細ボタンから遷移できます。</li>
@@ -49,7 +49,7 @@ Eメール：test@test<p></p>
 
 ### 3. 投稿者別作品一覧
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87758266-1e037e00-c847-11ea-8c7d-455ecf6a7fad.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87758266-1e037e00-c847-11ea-8c7d-455ecf6a7fad.png" alt="List of works by poster" width="50%" height="50%">
 </p>
 <ul>
   <li>投稿者名をクリックすると遷移できます。</li>
@@ -57,8 +57,8 @@ Eメール：test@test<p></p>
 
 ### 4. ログイン/新規登録
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87758642-cb769180-c847-11ea-85fc-1103ca832aa9.png">  
-    <img src="https://user-images.githubusercontent.com/65595354/87758434-6cb11800-c847-11ea-8210-9e08f3cd549f.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87758642-cb769180-c847-11ea-85fc-1103ca832aa9.png" alt="register" width="50%" height="50%">
+    <img src="https://user-images.githubusercontent.com/65595354/87758434-6cb11800-c847-11ea-8210-9e08f3cd549f.png" alt="login" width="50%" height="50%">
 </p>
 <ul>
   <li>未ログイン時、ヘッダーのログインボタンから遷移できます。</li>
@@ -68,7 +68,7 @@ Eメール：test@test<p></p>
 
 ### 5. 新規投稿
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87758822-23ad9380-c848-11ea-8fc7-0f4d3a0774c4.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87758822-23ad9380-c848-11ea-8fc7-0f4d3a0774c4.png" alt="new post" width="50%" height="50%">
 </p>
 <ul>
   <li>Homeの投稿するボタン、またはヘッダーの投稿から新規投稿ページに遷移できます。</li>
@@ -78,7 +78,7 @@ Eメール：test@test<p></p>
 
 ### 6. 編集
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87758915-5f485d80-c848-11ea-95dd-86ec6214c485.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87758915-5f485d80-c848-11ea-95dd-86ec6214c485.png" alt="edit" width="50%" height="50%">
 </p>
 <ul>
   <li>編集ボタンをクリックすると遷移できます。(ログインユーザと投稿者が一致する場合のみ表示されます。)</li>
@@ -87,7 +87,7 @@ Eメール：test@test<p></p>
 
 ### 7. 削除
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87759352-22c93180-c849-11ea-9032-92594ef195e3.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87759352-22c93180-c849-11ea-9032-92594ef195e3.png" alt="delete" width="50%" height="50%">
 </p>
 <ul>
   <li>ログインユーザと投稿者が一致する場合に削除ボタンが表示されます。</li>
@@ -103,9 +103,9 @@ Eメール：test@test<p></p>
 
 ### 9. アカウント情報
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/65595354/87759678-a5ea8780-c849-11ea-8013-f584e7331e6a.png">  
-    <img src="https://user-images.githubusercontent.com/65595354/87759816-d7fbe980-c849-11ea-9b47-d974d33c1007.png">  
-    <img src="https://user-images.githubusercontent.com/65595354/87760255-71c39680-c84a-11ea-8603-a2bbdc018f16.png">  
+  <img src="https://user-images.githubusercontent.com/65595354/87759678-a5ea8780-c849-11ea-8013-f584e7331e6a.png" alt="account1" width="50%" height="50%">
+    <img src="https://user-images.githubusercontent.com/65595354/87759816-d7fbe980-c849-11ea-9b47-d974d33c1007.png" alt="account2" width="50%" height="50%">
+    <img src="https://user-images.githubusercontent.com/65595354/87760255-71c39680-c84a-11ea-8603-a2bbdc018f16.png" alt="account3" width="50%" height="50%">
 </p>
 <ul>
   <li>編集ボタンからアカウント名、Eメール、パスワードを変更できます。</li>
@@ -121,7 +121,7 @@ Eメール：test@test<p></p>
 ## 💬 Usage
 ローカルで確認する場合は以下の操作を行います。<p></p>
 `$ git clone https://github.com/asuarks/Melody-Forest.git`<p></p>
-`$ cd hoge`<p></p>
+`$ cd (git cloneしたディレクトリ)`<p></p>
 `$ bundle install`<p></p>
 `$ rails db:create`<p></p>
 `$ rails db:migrate`<p></p>
