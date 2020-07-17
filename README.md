@@ -28,7 +28,7 @@ Eメール：test@test<p></p>
 
 ## Function
 ### 1. Home
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87685290-2cf21e00-c7be-11ea-867c-d1f0f4f8df00.png" alt="Home" width="50%" height="50%">  
 </p>
 <ul>
@@ -37,7 +37,7 @@ Eメール：test@test<p></p>
 </ul>
 
 ### 2. 詳細・コメント
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87700849-f6260300-c7d1-11ea-9952-7a88551da98c.png" alt="detail・comment" width="50%" height="50%">
 </p>
 <ul>
@@ -48,7 +48,7 @@ Eメール：test@test<p></p>
 </ul>
 
 ### 3. 投稿者別作品一覧
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87758266-1e037e00-c847-11ea-8c7d-455ecf6a7fad.png" alt="List of works by poster" width="50%" height="50%">
 </p>
 <ul>
@@ -56,7 +56,7 @@ Eメール：test@test<p></p>
 </ul>
 
 ### 4. ログイン/新規登録
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87758642-cb769180-c847-11ea-85fc-1103ca832aa9.png" alt="register" width="50%" height="50%">
     <img src="https://user-images.githubusercontent.com/65595354/87758434-6cb11800-c847-11ea-8210-9e08f3cd549f.png" alt="login" width="50%" height="50%">
 </p>
@@ -67,7 +67,7 @@ Eメール：test@test<p></p>
 </ul>
 
 ### 5. 新規投稿
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87758822-23ad9380-c848-11ea-8fc7-0f4d3a0774c4.png" alt="new post" width="50%" height="50%">
 </p>
 <ul>
@@ -77,7 +77,7 @@ Eメール：test@test<p></p>
 </ul>
 
 ### 6. 編集
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87758915-5f485d80-c848-11ea-95dd-86ec6214c485.png" alt="edit" width="50%" height="50%">
 </p>
 <ul>
@@ -86,7 +86,7 @@ Eメール：test@test<p></p>
 </ul>
 
 ### 7. 削除
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87759352-22c93180-c849-11ea-9032-92594ef195e3.png" alt="delete" width="50%" height="50%">
 </p>
 <ul>
@@ -102,7 +102,7 @@ Eメール：test@test<p></p>
 </ul>
 
 ### 9. アカウント情報
-<p align="center">
+<p>
   <img src="https://user-images.githubusercontent.com/65595354/87759678-a5ea8780-c849-11ea-8013-f584e7331e6a.png" alt="account1" width="50%" height="50%">
     <img src="https://user-images.githubusercontent.com/65595354/87759816-d7fbe980-c849-11ea-9b47-d974d33c1007.png" alt="account2" width="50%" height="50%">
     <img src="https://user-images.githubusercontent.com/65595354/87760255-71c39680-c84a-11ea-8603-a2bbdc018f16.png" alt="account3" width="50%" height="50%">
@@ -143,8 +143,8 @@ http://localhost:3000
 |detail|text||
 |user_id|integer||
 #### Association
-belongs_to :user
-has_many :comment
+- belongs_to :user
+- has_many :comment
 
 ### usersテーブル
 |Column|Type|Options|
@@ -163,8 +163,8 @@ has_many :comment
 |post_id|integer||
 |text|text||
 #### Association
-belongs_to :post
-belongs_to :user
+- belongs_to :post
+- belongs_to :user
 
 ### profilesテーブル
 |Column|Type|Options|
@@ -174,4 +174,4 @@ belongs_to :user
 |avatar|string||
 |description|text||
 #### Association
-belongs_to :user
+- belongs_to :user
