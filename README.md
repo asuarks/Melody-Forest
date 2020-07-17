@@ -1,14 +1,14 @@
 ## Overview
 - アプリ名：Melody Forest
+
 - オリジナルのBGMを自由に投稿、試聴できるWebアプリです。
 
+
 ## Background
-<li>音楽専門の投稿サイトは数が少ない</li>
+- 音楽専門の投稿サイトは数が少ない
+音楽専門の投稿サイトは数が少ない/知名度が低いなどの理由でyoutubeやtwitterに投稿する人が多いと感じたことが作成のきっかけです。
 
-音楽専門の投稿サイトは数が少ない/知名度が低いなどの理由でyoutubeやtwitterに投稿する人が多いと感じたことがきっかけです。
-
-<li>音楽は目に見えず、興味を持ってもらいにくい</li>
-
+- 音楽は目に見えず、興味を持ってもらいにくい
 音楽は目に見えないので作ってもアピールしにくいため、サイトを訪れた人が気軽に聞きたいと思ってもらえるような投稿サービスを作りたいと考えて作り始めました。
 
 
@@ -22,11 +22,11 @@ Eメール：test@test<p></p>
 
 
 ## Environment
-<li>Ruby on Rails</li>
-<li>HTML/SCSS</li>
-<li>Javascript/jQuery</li>
-<li>データベースはMySQLを使用</li>
-<li>デプロイはHerokuで実施</li>
+- Ruby on Rails
+- HTML/SCSS
+- Javascript/jQuery
+- データベースはMySQLを使用
+- デプロイはHerokuで実施
 
 ## Function
 ### 1. Home
@@ -133,7 +133,7 @@ http://localhost:3000
 
 
 ## 🎫 License
-<li>MIT</li>
+- MIT
 
 
 ## DB設計
