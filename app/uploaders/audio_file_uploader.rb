@@ -6,6 +6,15 @@ class AudioFileUploader < CarrierWave::Uploader::Base
   include CarrierWave::Audio
 
 
+  # 本番のみ S3使う場合は以下
+  # if Rails.env.development?
+  #   storage :file
+  # elsif Rails.env.test?
+  #   storage :file
+  # else
+  #   storage :fog
+  # end
+
 
   # 追記
   def store_dir
