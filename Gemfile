@@ -70,5 +70,5 @@ gem 'carrierwave-audio'
 gem 'audiojs-rails'
 
 gem 'mini_magick'
-
 gem 'pry-rails'
+gem 'fog-aws'
