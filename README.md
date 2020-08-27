@@ -27,6 +27,7 @@
 - Javascript/jQuery
 - データベースはMySQLを使用
 - デプロイはHerokuで実施
+- アップロード先(データ保存先)はS3に設定
 
 ## Function
 ### 1. Home
