@@ -1,6 +1,5 @@
 ## Overview
 - アプリ名：Melody Forest
-
 - オリジナルのBGMを自由に投稿、試聴できるWebアプリです。
 
 
